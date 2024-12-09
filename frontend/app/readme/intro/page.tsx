@@ -51,6 +51,34 @@ export default function Introduction() {
           </p>
         </section>
 
+        <section className="max-w-4xl space-y-6">
+          <h2 className="text-2xl font-semibold">Key Biomarkers Our Model Uses</h2>
+          <p className="text-base leading-relaxed">
+          Harmonics-to-Noise Ratio (HNR):
+          Indicator of vocal quality; measures the proportion of harmonic sound to noise. This measure is important because reduced harmonic quality is associated with the vocal breathiness and hoarseness commonly seen in Parkinson’s patients.
+          </p>
+          <p className="text-base leading-relaxed">
+          Noise-to-Harmonics Ratio (NHR):
+          Indicator of the amount of noise in your voice relative to harmonic sound. This is a key indicator for Parkinson’s as a higher NHR value is associated with vocal fold irregularities that are commonly seen in Parkinson’s patients.
+          </p>
+          <p className="text-base leading-relaxed">
+          3-Point Amplitude Perturbation Quotient Value (Shimmer:APQ3):
+          This value reflections variations in your vocal amplitude, assessing vocal stability. This is important in detecting Parkinson’s because a higher Shimmer APQ3 value is linked to instability and tremors in vocal control.
+          </p>
+          <p className="text-base leading-relaxed">
+          Amplitude Variations (MDVP:Shimmer(dB)):
+          This value quantifies the degree of loudness variations in your voice, indicating the strength or diminished control of vocal strength. This is correlated to Parkinson’s motor dysfunction.
+          </p>
+          <p className="text-base leading-relaxed">
+          Frequency Variations (Jitters):
+          Measures frequency instability, indicating any irregularities in vocal cord vibrations. Impaired neuromuscular control often seen in Parkinson’s patients cause such irregularities, making them a helpful metric for detecting Parkinson’s.
+          </p>
+          <p className="text-base leading-relaxed">
+          Variations in Voice Frequency (Spread2):
+          A measure linked to the spread of frequency components in your voice, highlighting irregularities. This metric indicates the presence of tremor-related vocal inconsistencies commonly seen in Parkinson’s patients. 
+          </p>
+        </section>
+
         <div className="flex gap-4 mt-8">
           <a
             href="/readme/installation"

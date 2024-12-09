@@ -18,7 +18,7 @@ export default function About() {
     },
     {
       name: "Priyanshi Singh",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      bio: "Priyanshi Singh is a 3rd Computational Cognitive Science and Data Science major looking to work in the medteck field",
       image: "/team/image.jpg", // Replace with actual paths
     },
     {
