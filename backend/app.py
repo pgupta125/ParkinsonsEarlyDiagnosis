@@ -94,7 +94,7 @@ async def predict_parkinsons(data: ParkinsonsInput):
         MIN_PRED = 0.718
         MAX_PRED = 0.990
         RANGE = MAX_PRED - MIN_PRED
-        UNCERTAINTY_ZONE = 0.1  # ±0.02 around threshold
+        UNCERTAINTY_ZONE = 0.1  
         
         # Updated classification logic with better confidence calculation
         if prediction < THRESHOLD - UNCERTAINTY_ZONE:  # Clearly healthy

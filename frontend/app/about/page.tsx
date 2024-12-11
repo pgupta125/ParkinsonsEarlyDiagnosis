@@ -9,22 +9,22 @@ export default function About() {
     {
       name: "Daniel Kim",
       bio: "Daniel Kim is 3rd year Computer Science and Statistics major working in the Software Engineering Industry.",
-      image: "/dan.jpeg", // Replace with actual paths
+      image: "/dan.jpeg", 
     },
     {
       name: "Parinita Gupta",
       bio: "Parinita Gupta is a 4th year computational Cognitive Science major with minors in computer science and neuroscience, doing research with computer vision and medical imaging. She aims to work as a software engineer in the medtech industry.",
-      image: "/pari2.jpeg", // Replace with actual paths
+      image: "/pari2.jpeg", 
     },
     {
       name: "Priyanshi Singh",
       bio: "Priyanshi Singh is a 3rd Computational Cognitive Science and Data Science major looking to work in the medtech field",
-      image: "/priyanshi.jpeg", // Replace with actual paths
+      image: "/priyanshi.jpeg", 
     },
     {
       name: "Abhinav Tata",
-      bio: "Abhinav Tata is a 3rd year Computer Science major aspiring to work in AI and Product Management.",
-      image: "/tata.jpeg", // Replace with actual paths
+      bio: "Abhinav Tata is a 3rd year Computer Science and Statistics major aspiring to work in AI and Product Management.",
+      image: "/tata.jpeg", 
     },
   ];
 
