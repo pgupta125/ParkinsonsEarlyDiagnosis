@@ -91,26 +91,28 @@ async def predict_parkinsons(data: ParkinsonsInput):
         prediction = float(model.predict(scaled_data)[0])
         
         THRESHOLD = 0.753
-    
-        # Classification logic
-        if prediction < THRESHOLD - 0.1:
-            status = "Likely Healthy"
+        MIN_PRED = 0.718
+        MAX_PRED = 0.990
+        RANGE = MAX_PRED - MIN_PRED
+        UNCERTAINTY_ZONE = 0.1  # ±0.02 around threshold
+        
+        # Updated classification logic with better confidence calculation
+        if prediction < THRESHOLD - UNCERTAINTY_ZONE:  # Clearly healthy
             has_parkinsons = False
-            confidence = min(1.0, (THRESHOLD - prediction) / 0.2)
-        elif prediction > THRESHOLD + 0.1:
-            status = "Likely Parkinson's"
+            confidence = min(1.0, (THRESHOLD - prediction) / (THRESHOLD - MIN_PRED))
+        elif prediction > THRESHOLD + UNCERTAINTY_ZONE:  # Clearly Parkinson's
             has_parkinsons = True
-            confidence = min(1.0, (prediction - THRESHOLD) / 0.2)
-        else:
-            status = "Borderline - Further Testing Recommended"
+            confidence = min(1.0, (prediction - THRESHOLD) / (MAX_PRED - THRESHOLD))
+        else: 
             has_parkinsons = prediction > THRESHOLD
-            confidence = 0.5
+            distance_from_threshold = abs(prediction - THRESHOLD)
+            confidence = max(0.5, 1 - (distance_from_threshold / UNCERTAINTY_ZONE))
+        
         
         return {
             "prediction": prediction,
             "has_parkinsons": has_parkinsons,
             "confidence": confidence,
-            "status": status
         }
     
     except Exception as e:
