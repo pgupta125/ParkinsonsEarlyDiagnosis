@@ -12,11 +12,11 @@ export default function Installation() {
 
       <main className="flex flex-col gap-8 items-center sm:items-start">
         <h1 className="text-4xl sm:text-5xl text-center sm:text-left font-[family-name:var(--font-geist-poppins)]">
-          <strong>Installation & Usage</strong>
+          <strong>Installation</strong>
         </h1>
 
         <section className="max-w-4xl space-y-6">
-          <h2 className="text-2xl font-semibold">Installation</h2>
+          {/* <h2 className="text-2xl font-semibold">Installation</h2> */}
           <p className="text-base leading-relaxed">
             To install and use our Parkinson's Classifier model, follow the steps below. Ensure you have Python 3.8 or above installed on your machine.
           </p>
@@ -28,67 +28,47 @@ export default function Installation() {
               </pre>
             </li>
             <li>
-              Navigate to the project directory:
+              Open two terminals. Navigate to the project directory in each:
               <pre className="bg-gray-100 p-4 rounded-md text-sm">
                 <code>cd ParkinsonsEarlyDiagnosis</code>
               </pre>
             </li>
             <li>
-              Create and activate a virtual environment (optional but recommended):
+              For the first terminal:
               <pre className="bg-gray-100 p-4 rounded-md text-sm">
                 <code>
-                    {`# Create a virtual environment
-                    python -m venv .venv
+                    {`# Navigate to the backend directory
+cd backend
 
-                    # Activate the environment (Windows)
-                    .venv\\Scripts\\activate
+# Create a virtual environment
+python -m venv venv
 
-                    # Activate the environment (macOS/Linux)
-                    source .venv/bin/activate`}
+# Activate the environment
+source venv/bin/activate
+
+# install required packages
+pip install -r requirements.txt
+
+python app.py`}
                 </code>
               </pre>
             </li>
             <li>
-              Install the required packages:
+              For the second terminal:
               <pre className="bg-gray-100 p-4 rounded-md text-sm">
-                <code>pip install -r requirements.txt</code>
+                <code>
+                    {`# Navigate to the frontend directory
+cd frontend
+
+# Install the Node Package Manager
+npm install
+
+# Launch the frontend
+npm run dev`}
+                </code>
               </pre>
             </li>
           </ol>
-        </section>
-
-        <section className="max-w-4xl space-y-6">
-          <h2 className="text-2xl font-semibold">Usage</h2>
-          <p className="text-base leading-relaxed">
-            After successful installation, you can use the classifier to analyze audio data. Follow the steps below to run the model:
-          </p>
-          <ol className="list-decimal ml-6 space-y-4">
-            <li>
-              Prepare your data. Ensure it is in the correct format (.csv).
-            </li>
-            <li>
-              Run the model with your data:
-              <pre className="bg-gray-100 p-4 rounded-md text-sm">
-                <code>python main.py --input path/to/data.csv</code>
-              </pre>
-            </li>
-          </ol>
-        </section>
-
-        <section className="max-w-4xl space-y-6">
-          <h2 className="text-2xl font-semibold">Dependencies</h2>
-          <p className="text-base leading-relaxed">
-            Ensure you have the following dependencies installed (these will be handled by <code>requirements.txt</code>):
-          </p>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Python 3.8 or above</li>
-            <li>TensorFlow ({">"}=2.8)</li>
-            <li>Librosa</li>
-            <li>NumPy</li>
-            <li>Pandas</li>
-            <li>Scikit-learn</li>
-            <li>Matplotlib</li>
-          </ul>
         </section>
 
         <div className="flex gap-4 mt-8">
