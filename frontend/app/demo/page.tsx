@@ -78,31 +78,7 @@ const HEALTHY_DATA = {
   d2: "2.388797",
   ppe: "0.193249"
 };
-
-const INITIAL_DATA: ParkinsonsData = {
-  mdvp_fo_hz: "",
-  mdvp_fhi_hz: "",
-  mdvp_flo_hz: "",
-  mdvp_jitter_percent: "",
-  mdvp_jitter_abs: "",
-  mdvp_rap: "",
-  mdvp_ppq: "",
-  jitter_ddp: "",
-  mdvp_shimmer: "",
-  mdvp_shimmer_db: "",
-  shimmer_apq3: "",
-  shimmer_apq5: "",
-  mdvp_apq: "",
-  shimmer_dda: "",
-  nhr: "",
-  hnr: "",
-  rpde: "",
-  dfa: "",
-  spread1: "",
-  spread2: "",
-  d2: "",
-  ppe: "",
-};
+  
 
 type PredictionState = {
   result: string | null;
