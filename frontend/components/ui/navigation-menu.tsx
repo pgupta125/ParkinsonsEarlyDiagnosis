@@ -155,7 +155,7 @@ export function NavBar() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="https://drive.google.com/file/d/1bC0frcLcwSooajQ-shpaV_4Ape0Ijzlr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               In-Depth Paper
             </NavigationMenuLink>
